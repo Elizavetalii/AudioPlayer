@@ -1,0 +1,31 @@
+﻿<Window x:Class="AudioPlayer.ListeningHistory"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AudioPlayer"
+        mc:Ignorable="d"
+        MinHeight="450" MinWidth="400"
+        MaxHeight="450" MaxWidth="400"
+        Title="ListeningHistory" Height="450" Width="400">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FFF1F0F0"/>
+                <GradientStop Color="#FFF1F0F0" Offset="0.325"/>
+                <GradientStop Color="#FFFCE0E0" Offset="0.688"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <ListBox x:Name="ListBoxHistory" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="9,60,15,10" RenderTransformOrigin="0.5,0.5" SelectionChanged="ListBoxHistory_SelectionChanged">
+            <ListBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="0.802"/>
+                    <RotateTransform Angle="0.224"/>
+                    <TranslateTransform X="1.302" Y="0.013"/>
+                </TransformGroup>
+            </ListBox.RenderTransform>
+        </ListBox>
+        <TextBlock HorizontalAlignment="Center" Margin="0,10,0,0" TextWrapping="Wrap" Text="___Your Listening History____                   " VerticalAlignment="Top" Width="402" FontFamily="Brush Script MT" FontSize="36" TextDecorations="Underline" Height="42"/>
+    </Grid>
+</Window>
